@@ -8,7 +8,13 @@ export default function Home() {
       <div>
         <Navbar />
       </div>
-      <div>body</div>
+  <div><div class="card mt-3" style={{"width" : "18rem","maxHeight" : "360px"}}>
+  <img class="card-img-top" src="..." alt="..."/>
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">This is an important text.</p>
+  </div>
+</div></div>
       <div>
         <Footer />
       </div>

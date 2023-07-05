@@ -6,8 +6,8 @@ export default function Navbar() {
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-success">
         <div className="container-fluid">
-          <Link className="navbar-brand" href="/">
-            Navbar
+          <Link className="navbar-brand fs-1 fst-italic font-weight-bold" href="/">
+            GoFood
           </Link>
           <button
             className="navbar-toggler"
@@ -23,58 +23,16 @@ export default function Navbar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" href="/">
+                <Link className="nav-link active" aria-current="page" to="/">
                   Home
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" href="/">
-                  Link
+                <Link className="nav-link" to={"/login"}>
+                  Login
                 </Link>
               </li>
-              <li className="nav-item dropdown">
-                <Link
-                  className="nav-link dropdown-toggle"
-                  href="/"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Dropdown
-                </Link>
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                    <Link className="dropdown-item" href="/">
-                      Action
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" href="/">
-                      Another action
-                    </Link>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" href="/">
-                      Something else here
-                    </Link>
-                  </li>
-                </ul>
-              </li>
-              <li className="nav-item">
-                <Link
-                  className="nav-link disabled"
-                  href="/"
-                  tabindex="-1"
-                  aria-disabled="true"
-                >
-                  Disabled
-                </Link>
-              </li>
-            </ul>
+              </ul>
             <form className="d-flex">
               <input
                 className="form-control me-2"
