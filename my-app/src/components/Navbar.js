@@ -6,7 +6,10 @@ export default function Navbar() {
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-success">
         <div className="container-fluid">
-          <Link className="navbar-brand fs-1 fst-italic font-weight-bold" href="/">
+          <Link
+            className="navbar-brand fs-1 fst-italic font-weight-bold"
+            href="/"
+          >
             GoFood
           </Link>
           <button
@@ -32,7 +35,7 @@ export default function Navbar() {
                   Login
                 </Link>
               </li>
-              </ul>
+            </ul>
             <form className="d-flex">
               <input
                 className="form-control me-2"
@@ -40,7 +43,10 @@ export default function Navbar() {
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button className="btn btn-outline-success" type="submit">
+              <button
+                className="btn btn-outline-success text-white bg-success "
+                type="submit"
+              >
                 Search
               </button>
             </form>
