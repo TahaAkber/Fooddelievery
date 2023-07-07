@@ -12,7 +12,9 @@ const mongoDB = async () => {
       );
       fetched_data.find().toArray(function (err, result) {
         if (err) console.log(err);
-        else console.log(result);
+        else {
+          global.food_items = result;
+        }
       });
     }
   } catch (error) {
