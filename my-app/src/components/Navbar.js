@@ -26,35 +26,25 @@ export default function Navbar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link" aria-current="page" to="/">
+                <Link
+                  className="nav-link active fs-5"
+                  aria-current="page"
+                  to="/"
+                >
                   Home
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to={"/login"}>
-                  Login
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to={"/signup"}>
-                  SignUp
-                </Link>
-              </li>
             </ul>
-            <form className="d-flex">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button
-                className="btn btn-outline-success text-white bg-success "
-                type="submit"
-              >
-                Search
-              </button>
-            </form>
+
+            <div className="d-flex">
+              <Link className="btn bg-white text-success mx-1" to={"/login"}>
+                Login
+              </Link>
+
+              <Link className="btn bg-white text-success mx-1" to={"/signup"}>
+                SignUp
+              </Link>
+            </div>
           </div>
         </div>
       </nav>

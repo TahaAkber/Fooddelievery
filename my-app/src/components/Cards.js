@@ -6,7 +6,7 @@ export default function Cards(props) {
   return (
     <div>
       <div>
-        <div class="card mt-3" style={{ width: "18rem", maxHeight: "430px" }}>
+        <div class="card mt-3">
           <img
             class="card-img-top"
             src={props.imgSrc}
@@ -16,7 +16,7 @@ export default function Cards(props) {
           <div class="card-body">
             <h5 class="card-title">{props.foodName}</h5>
             <div className="container w-100">
-              <select className="m-2 h-100 bg-success rounded">
+              <select className="m-2 h-50 bg-success rounded">
                 {Array.from(Array(6), (e, i) => {
                   return (
                     <option key={i + 1} value={i + 1}>
@@ -25,7 +25,7 @@ export default function Cards(props) {
                   );
                 })}
               </select>
-              <select className="m-2 h-100 bg-success rounded">
+              <select className="m-2 h-50 bg-success rounded">
                 {priceoptions.map((data) => {
                   return (
                     <option key={data} value={data}>
