@@ -1,7 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
+  const navigate = useNavigate();
+  const handlelogout = () => {
+    localStorage.removeItem("authToken");
+    navigate("/login");
+  };
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-success">
@@ -49,16 +54,27 @@ export default function Navbar() {
                 ""
               )}
             </ul>
+            {!localStorage.getItem("authToken") ? (
+              <div className="d-flex">
+                <Link className="btn bg-white text-success mx-1" to={"/login"}>
+                  Login
+                </Link>
 
-            <div className="d-flex">
-              <Link className="btn bg-white text-success mx-1" to={"/login"}>
-                Login
-              </Link>
-
-              <Link className="btn bg-white text-success mx-1" to={"/signup"}>
-                SignUp
-              </Link>
-            </div>
+                <Link className="btn bg-white text-success mx-1" to={"/signup"}>
+                  SignUp
+                </Link>
+              </div>
+            ) : (
+              <div>
+                <div className="btn bg-white text-success mx-2">My Cart</div>
+                <div
+                  className="btn bg-white text-danger mx-2 "
+                  onClick={handlelogout}
+                >
+                  LogOut
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </nav>

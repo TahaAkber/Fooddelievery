@@ -134,9 +134,8 @@ export default function Home() {
                           className="col-12 col-md-6 col-lg-3"
                         >
                           <Cards
-                            foodName={filteritems.name}
+                            foodItem={filteritems}
                             options={filteritems.options[0]}
-                            imgSrc={filteritems.img}
                           />
                         </div>
                       );
