@@ -1,6 +1,8 @@
 import React from "react";
 
-export default function Cards() {
+export default function Cards(props) {
+  let options = props.options;
+  let priceoptions = Object.keys(options);
   return (
     <div>
       <div>
@@ -11,8 +13,7 @@ export default function Cards() {
             alt="..."
           />
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is an important text.</p>
+            <h5 class="card-title">{props.foodName}</h5>
             <div className="container w-100">
               <select className="m-2 h-100 bg-success rounded">
                 {Array.from(Array(6), (e, i) => {
@@ -24,8 +25,13 @@ export default function Cards() {
                 })}
               </select>
               <select className="m-2 h-100 bg-success rounded">
-                <option value={"half"}>Half</option>
-                <option value={"full"}>Full</option>
+                {priceoptions.map((data) => {
+                  return (
+                    <option key={data} value={data}>
+                      {data}
+                    </option>
+                  );
+                })}
               </select>
               <div className="d-inline h-100 fs-5">Total Price</div>
             </div>
