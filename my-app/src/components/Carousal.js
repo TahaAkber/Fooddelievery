@@ -79,3 +79,5 @@ export default function Carousal() {
     </div>
   );
 }
+
+//we cant use because we need to filter for search thats why we wont make a component

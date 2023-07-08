@@ -7,11 +7,7 @@ export default function Cards(props) {
     <div>
       <div>
         <div class="card mt-3" style={{ width: "18rem", maxHeight: "430px" }}>
-          <img
-            class="card-img-top"
-            src="https://www.licious.in/blog/wp-content/uploads/2020/12/Chicken-Barbeque-Kebab.jpg"
-            alt="..."
-          />
+          <img class="card-img-top" src={props.imgSrc} alt="..." />
           <div class="card-body">
             <h5 class="card-title">{props.foodName}</h5>
             <div className="container w-100">
