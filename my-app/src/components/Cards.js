@@ -7,7 +7,12 @@ export default function Cards(props) {
     <div>
       <div>
         <div class="card mt-3" style={{ width: "18rem", maxHeight: "430px" }}>
-          <img class="card-img-top" src={props.imgSrc} alt="..." />
+          <img
+            class="card-img-top"
+            src={props.imgSrc}
+            alt="..."
+            style={{ height: "200px", objectFit: "fill" }}
+          />
           <div class="card-body">
             <h5 class="card-title">{props.foodName}</h5>
             <div className="container w-100">
