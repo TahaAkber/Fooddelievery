@@ -20,6 +20,9 @@ const reducer = (state, action) => {
       newArr.splice(action.index, 1);
       return newArr;
 
+    case "DROP":
+      let empArray = [];
+      return empArray;
     default:
       console.log("Error in Reducer");
   }
