@@ -15,7 +15,7 @@ const reducer = (state, action) => {
           img: action.img,
         },
       ];
-    case "Remove":
+    case "REMOVE":
       let newArr = [...state];
       newArr.splice(action.index, 1);
       return newArr;

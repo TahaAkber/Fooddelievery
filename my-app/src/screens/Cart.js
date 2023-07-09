@@ -42,7 +42,10 @@ export default function Cart() {
   return (
     <div>
       {console.log(data)}
-      <div className="container m-auto mt-5 table-responsive  table-responsive-sm table-responsive-md">
+      <div
+        className="container m-auto mt-5 table-responsive  table-responsive-sm table-responsive-md"
+        style={{ height: "400px", overflow: "scroll" }}
+      >
         <table className="table table-hover ">
           <thead className=" text-success fs-4">
             <tr>

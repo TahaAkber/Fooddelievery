@@ -5,7 +5,7 @@ import Modal from "../Modal";
 import Cart from "../screens/Cart";
 import { useCart } from "./ContextReducer";
 export default function Navbar() {
-  let data = useCart();
+  let Data = useCart();
   const [cartView, setCartView] = useState(false);
   const navigate = useNavigate();
   const handlelogout = () => {
@@ -79,7 +79,7 @@ export default function Navbar() {
                 >
                   My Cart{" "}
                   <Badge pill bg="danger">
-                    {data.length}
+                    {Data.length}
                   </Badge>
                 </div>
                 {cartView ? (
