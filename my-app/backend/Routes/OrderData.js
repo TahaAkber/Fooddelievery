@@ -7,7 +7,7 @@ router.post("/orderData", async (req, res) => {
   await data.splice(0, 0, { Order_date: req.body.order_date });
 
   //if email not exisitng in db then create: else: InsertMany()
-  let eId = await Order.findOne({ 'email': req.body.email });
+  let eId = await Order.findOne({ email: req.body.email });
   console.log(eId);
   if (eId === null) {
     try {
@@ -37,4 +37,12 @@ router.post("/orderData", async (req, res) => {
   }
 });
 
+router.post("/myOrderData", async (req, res) => {
+  try {
+    let myData = await Order.findOne({ email: req.body.email });
+    res.json({ orderData: myData });
+  } catch (error) {
+    res.send("Server Error", error.message);
+  }
+});
 module.exports = router;
