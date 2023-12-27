@@ -9,11 +9,7 @@ Short project description goes here.
   - [Installation](#installation)
 - [Available Scripts](#available-scripts)
 - [Running Tests](#running-tests)
-- [Building for Production](#building-for-production)
 - [Deployment](#deployment)
-- [Ejecting](#ejecting)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Getting Started
 
