@@ -27,7 +27,7 @@ Make sure you have the following installed on your machine:
    gh repo clone TahaAkber/Fooddelievery
 
 2. Navigate to the project directory:
-  cd Fooddelievery
+   cd Fooddelievery
 3. npm install
 
 ## Available Scripts
@@ -39,8 +39,8 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Navigate to Backend folder:
-cd backend
+* Navigate to Backend folder:
+  -cd backend
 ### `npm start`
 
 The page will reload when you make changes.\
